@@ -1,5 +1,6 @@
 {
   "expo": {
+    "sdkVersion": "40.0.0",
     "name": "nucampsite",
     "slug": "nucampsite",
     "version": "1.0.0",

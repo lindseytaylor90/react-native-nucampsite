@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { ScrollView } from 'react-native-gesture-handler';
-import { Text, View } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
 import { Card } from 'react-native-elements';
 
 function RenderContact() {
     return (
         <Card 
-            featuredTitle="Contact Information"
+            title="Contact Information"
             wrapperStyle={{margin: 10}}
         >
             <Text style={{marginBottom: 10}}>

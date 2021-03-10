@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
-import { ScrollView } from 'react-native-gesture-handler';
-import { Text, View } from 'react-native';
+import { ScrollView, Text, View, FlatList} from 'react-native';
 import { Card } from 'react-native-elements';
 import { PARTNERS } from '../shared/partners';
-import { FlatList } from 'react-native';
 import { ListItem } from 'react-native-elements';
 
 
 function RenderMission() {
     return (
         <Card 
-            featuredTitle="Contact Information"
+            title ="Mission Statment"
             wrapperStyle={{margin: 10}}
         >
             <Text style={{marginBottom: 10}}>
@@ -50,7 +48,7 @@ class About extends Component {
         return(
             <ScrollView>
                 <RenderMission/>
-                <Card>
+                <Card title='Community Partners'>
                     <FlatList
                         data={this.state.partners}
                         renderItem={renderPartner}

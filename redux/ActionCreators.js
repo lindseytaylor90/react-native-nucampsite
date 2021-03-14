@@ -152,3 +152,39 @@ export const addFavorite = campsiteId => ({
     type: ActionTypes.ADD_FAVORITE,
     payload: campsiteId
 });
+
+export const postComment =(commetToPost) => dispatch => {
+   // dispatch(partnersLoading());
+   const newComment={ 
+        ...commetToPost,
+        date: new Date().toISOString()
+   };
+
+   setTimeout(() => {
+        dispatch(addComment(newComment));
+   }, 2000);
+
+   /* return fetch(baseUrl + 'partners')
+        .then(response => {
+                if (response.ok) {
+                    return response;
+                } else {
+                    const error = new Error(`Error ${response.status}: ${response.statusText}`);
+                    error.response = response;
+                    throw error;
+                }
+            },
+            error => {
+                const errMess = new Error(error.message);
+                throw errMess;
+            })
+        .then(response => response.json())
+        .then(partners => dispatch(addPartners(partners)))
+        .catch(error => dispatch(partnersFailed(error.message)));*/
+};
+
+
+export const addComment = (newComment) => ({
+    type: ActionTypes.ADD_COMMENT,
+    payload:newComment
+});

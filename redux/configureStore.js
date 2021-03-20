@@ -17,7 +17,7 @@ const config = {
 
 export const ConfigureStore = () => {
     const store = createStore(
-        combineReducers({
+        persistCombineReducers(config, {
             campsites,
             comments,
             partners,
@@ -29,5 +29,5 @@ export const ConfigureStore = () => {
 
     const persistor = persistStore(store);
 
-    return { presistor, store };
+    return { persistor, store };
 }

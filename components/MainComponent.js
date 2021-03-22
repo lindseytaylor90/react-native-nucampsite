@@ -217,14 +217,14 @@ const MainNavigator = createDrawerNavigator(
         Login: { 
         screen: LoginNavigator,
         navigationOptions: {
-           /* drawerIcon: ({tintColor}) => (
+           drawerIcon: ({tintColor}) => (
                 <Icon
-                    name='login'
+                    name='sign-in'
                     type='font-awesome'
                     size={24}
                     color={tintColor}
                 />
-            )*/
+            )
         }
     },
         Home: { 
